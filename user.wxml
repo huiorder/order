@@ -1,0 +1,60 @@
+<view class="container">
+
+	<view class="user-section ">
+		<image class="bg" src="/static/img/user/user-bg.jpg"></image>
+		<view class="user-info-box">
+			<image class="portrait" src="{{ userInfo.face|| defaultFace }}"></image>
+		</view>
+		<view class="info-box" bindtap="showNike">
+			<text class="username">{{ userInfo.nikeName||'登录/注册'}}</text>
+			<text></text>
+		</view>
+	</view>
+
+</view>
+<view>
+    <view class="tj-sction">
+        <view class="tj-item">
+			<van-icon name="balance-o" color="green" size="30px"></van-icon>
+            <text class="num">0.0</text><text>余额</text>
+        </view>
+        <view class="tj-item">
+			<van-icon name="gem-o" color="green" size="30px" info="99+"></van-icon>
+            <text class="num">0</text><text>优惠券</text>
+        </view>
+        <view class="tj-item">
+			<van-icon name="medal-o" color="green" size="30px" info="10"></van-icon>
+            <text class="num">10</text><text>积分</text>
+        </view>
+    </view>
+    <view class="order-section">
+		<navigator class="order-item" url="/pages/order/order?state=1" open-type="switchTab" hover-class="common-hover" hover-stay-time="{{50}}">
+			<van-icon name="paid" color="green" size="30px"/>			
+			<text>待付款</text>
+		</navigator>
+		<navigator class="order-item" url="/pages/order/order?state=2" open-type="switchTab" hover-class="common-hover" hover-stay-time="{{50}}">
+			<van-icon name="logistics" color="green" size="30px"info="1"/>
+			<text>待收货</text>
+		</navigator>
+		<navigator class="order-item" url="/pages/order/order?state=3" open-type="switchTab" hover-class="common-hover" hover-stay-time="{{50}}">
+			<van-icon name="comment-o" color="green" size="30px"/>
+			<text>待评价</text>
+		</navigator><navigator class="order-item" url="/pages/order/order?state=4" open-type="switchTab" hover-class="common-hover" hover-stay-time="{{50}}">
+			<van-icon name="refund-o" color="green" size="30px"/>
+			<text>退款/售后</text>
+		</navigator>
+		<navigator class="order-item" url="/pages/order/order?state=0" open-type="switchTab" hover-class="common-hover" hover-stay-time="{{50}}">
+			<van-icon name="records" color="green" size="30px"/>
+			<text>全部订单</text>
+		</navigator>
+    </view>
+</view>
+<view class="ItemBar">
+	<van-cell-group>
+		<van-cell icon="like-o" title="我的收藏" value="收藏换积分" is-link link-type="navigateTo" url=""/>
+		<van-cell icon="share-o" title="分享" value="邀请好友送大礼" is-link link-type="navigateTo" url=""/>
+		<van-cell icon="good-job-o" title="晒单" value="晒单的积分"  is-link link-type="navigateTo" url=""/>
+		<van-cell icon="location-o" title="地址管理" value="取餐地址" is-link link-type="navigateTo" url=""/>
+		<van-cell icon="setting-o" title="设置" value="" is-link link-type="navigateTo" url=""/>
+	</van-cell-group>
+</view>
